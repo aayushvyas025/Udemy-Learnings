@@ -35,7 +35,101 @@ console.log(["Aayush", "Vyas", "Saijal", "Vyas"]);
 
 // - Object : In Javascript every things is object mainly, javascript is also used to store multiple data in keys and pairs manner which called properties of object
 console.log({ firstname: "Aayush", lastname: "Vyas", isAdult: true });
+/**
+ * Above output is look like this
+ *  {
+ *    'key'  :  'value'
+ *   firstname:"Aayush",
+ *    'key' : 'value'
+ *   lastname: "vyas",
+ *   'key' : 'value'
+ *   isAdult: true
+ *
+ * } */
 
 //* Variables
 // Variables are basic storage units in programming which used to stored our data
-// Variables are empty container to stores data in program memory block and assign the address to it which we access with specific name or identifier to use for updating it. 
+// Variables are empty container to stores data in program memory block and assign the address to it which we access with specific name or identifier to use for updating it.
+
+//* In javascript we have 3 ways to create the Variables
+
+//* 1st. var
+// --> Var is the oldest way to create variables in javascript.
+var myName = "Aayush Vyas"; // variable of myName
+
+// --> We can access variable also with the identifier
+console.log(myName); // Output : Aayush Vyas
+
+// --> Var keyword variables always create the global scope or function scope
+{
+  //* When we used curly braces than we create block scope
+  // when we create the variable with var keyword than we can access the variable in block scope also
+  console.log(myName);
+}
+
+// --> We can reassign the variable but re-declare also
+// Variable can re-assign also
+myName = "Kratik Vyas"; // Here we re-assign the variable
+console.log(myName);
+
+// var keyword variable is also re-declare also....
+var myName = "Aayush";
+console.log(myName);
+
+//* 2nd. let
+//--> let keyword is also used to create variable and it is newer way which introduce in ES6 version
+let name = "Aayush Vyas";
+console.log(name);
+// --> let keyword variable create block scope variable means variable accessible to that block only
+
+{
+  console.log(name); // Output : Aayush Vyas
+  //? So javascript works in lexical scope so variables in parent's scope access by the children scope
+
+  let nameTwo = "Rahul Bajaj";
+}
+
+// access the nameTwo variable here
+// console.log(nameTwo); //! error - nameTwo is not defined
+
+// --> let keyword variable also re-assign the value but not re-declared
+name = "Rahul Singh"; //* re-assign the value
+console.log(name);
+
+/**
+ * ! We can't re-declare the variable so it give error to us !!! 
+let name = "Utkarsh Rathore"; 
+console.log(name)
+*/
+
+//* const keyword
+// const keywords mainly used to create constant variable which is introduce in ES6 Version
+
+// Constants have some rules to create otherwise it give error to us.
+
+// 1st. always initialize the constant not just declare it otherwise it give error
+const userId = 245789; //* When we assign the value to constant or variables than this called initialization of variable
+console.log(userId);
+/**
+ * const employeeId; //! When we just declare the variable than this called declaration of variable. 
+console.log(employeeId)
+*/
+
+// 2nd. We can't re-assign the constants it will be remain same as through the program 
+/** 
+ * ! Re-assignment give error 
+ * userId = '_id12334897643082'; 
+ * console.log(userId);  
+ */
+
+// --> const keywords also create the block scope also 
+{
+    console.log(userId); 
+   const isAdult = true; 
+   console.log(isAdult); 
+}
+
+// console.log(isAdult); //! We can't access the isAdult constant because not defined in this global scope 
+
+//* let, const are newer way to create variables and constant which nowadays used to create variables  
+//* const are also used to create variables only but it have some flaws like redeclaration or function scope 
