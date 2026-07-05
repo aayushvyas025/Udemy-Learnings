@@ -2,7 +2,7 @@
 // --> Programming languages provide operators to perform operations for manipulating the data.  
 // --> In programming we have different type of operators to perform different operations 
 
-//? Arithmetic Operators 
+//? 1st. Arithmetic Operators 
 // Arithmetic operators are used to perform basic mathematical operation between two or more operands  
 
 //* What is operators and operands ? 
@@ -57,7 +57,7 @@ const expoOfTwo = valueOne ** 2;  //? Here behind the scene 15 * 15 = 225
 console.log(expoOfTwo);  //? Output : 225 
 */
 
-//? Unary Operator 
+//? 2nd. Unary Operator 
 // Unary operators are used to perform operations with single operand only. 
 
 // Types of unary operator  
@@ -66,7 +66,7 @@ console.log(expoOfTwo);  //? Output : 225
 // Assignment operator in programming is very essential to assign the value to our variables or another identifier in javascript 
 // For assignment operator we used equal symbol '=' symbol   
 // Example of assignment operator 
-let myValue = 25;  //? Here we are using assignment operator to '=' assign the value. 
+// let myValue = 25;  //? Here we are using assignment operator to '=' assign the value. 
 // console.log(myValue);  //? Output: 25 
 
 //* 2nd. Increment or Decrement Operators  
@@ -110,21 +110,87 @@ console.log(myValue); //? Output: 25
 //* 3rd. Arithmetic Unary operator 
 // We can perform the arithmetic unary operation also with single operands 
 //* Unary addition operator
-myValue += 3; 
-console.log(myValue);  // Output: 28 
+// myValue += 3; 
+// console.log(myValue);  // Output: 28 
 //* Unary subtraction operator 
-myValue -=2; 
-console.log(myValue); // Output: 26 
+// myValue -=2; 
+// console.log(myValue); // Output: 26 
 //* Unary multiplication operator 
-myValue *=4;  
-console.log(myValue); // Output: 104 
+// myValue *=4; 
+// console.log(myValue); // Output: 104 
 //* Unary division operator 
-myValue /=2; 
-console.log(myValue); // Output: 52  
+// myValue /=2; 
+// console.log(myValue); // Output: 52  
 //* Unary exponential operator 
-myValue **=2; 
-console.log(myValue); // Output: 2704
+// myValue **=2; 
+// console.log(myValue); // Output: 2704
 //* Unary modulus operator 
-myValue %=2; 
-console.log(myValue); // Output: 0
+// myValue %=2; 
+// console.log(myValue); // Output: 0
 
+//? 3rd. Comparison Operator 
+// We used comparison operator to compare between two or more operands. 
+// Comparison Operator always return the boolean value true or false 
+
+// Types of Comparison Operator 
+let valueOne = 25; 
+let valueTwo = 50; 
+let valueThree = 50; 
+//* Greater than comparison operator 
+//  Greater than operator ">" operator is used to find which operand is greater among two or more operands. 
+let greaterThanResult = valueOne > valueTwo; 
+console.log(greaterThanResult) // Output: false 
+
+greaterThanResult = valueTwo > valueOne; 
+console.log(greaterThanResult); // Output: true  
+ 
+greaterThanResult = valueTwo > valueThree; 
+console.log(greaterThanResult) // Output: false  
+
+//* Greater than equal too comparison operator 
+// Greater than equal too ">=" operator also checks the greater than between two or more operands but here it checks another case which is equal too. 
+// If Both operands are similar than it returns true boolean value 
+
+// case 1 
+let greaterThanEqualResult = valueOne >= valueTwo; 
+console.log(greaterThanEqualResult); // Output: false 
+
+// case 2  
+greaterThanEqualResult = valueTwo >= valueOne; 
+console.log(greaterThanEqualResult); // Output: true  
+
+// case 3 - if both operands 
+greaterThanEqualResult = valueTwo >= valueThree; 
+console.log(greaterThanEqualResult); // Output: true  
+
+//* Smaller than comparison operator 
+// Smaller than "<" operator is used to check smaller operand among two or more than two. 
+
+let smallerThanResult = valueOne < valueTwo; 
+console.log(smallerThanResult);  // Output: true 
+
+smallerThanResult = valueTwo < valueOne; 
+console.log(smallerThanResult) // Output: false 
+
+//* Smaller than equal too comparison operator 
+// Similar like greater than equal too this smaller than equal too "<=" operator is used to check smaller than and equal too between operands 
+
+// case one 
+let smallerThanEqualResult = valueOne <= valueTwo; 
+console.log(smallerThanEqualResult); // Output: true 
+
+// case two 
+smallerThanEqualResult = valueTwo <= valueOne; 
+console.log(smallerThanEqualResult); // Output: false  
+
+// case three 
+smallerThanEqualResult = valueTwo <= valueThree; 
+console.log(smallerThanEqualResult); // Output: true  
+
+//? typeof operator 
+// typeof operator is in-build method to find the type of data or value , variables 
+// example of  typeof operator 
+const str = 'Aayush'; 
+console.log(typeof valueOne); // Output: Number 
+console.log(typeof valueTwo); // Output: Number 
+console.log(typeof str); // Output: String 
