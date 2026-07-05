@@ -194,3 +194,6 @@ const str = 'Aayush';
 console.log(typeof valueOne); // Output: Number 
 console.log(typeof valueTwo); // Output: Number 
 console.log(typeof str); // Output: String 
+
+//* Equality comparison operator 
+// This 
