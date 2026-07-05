@@ -10,38 +10,121 @@
 // Operands are our values or data or variable on which we our operator is applied example 2 + 3  here 2 and 3 are operands. 
 
 // Types of Arithmetic Operators 
+/*
 let valueOne = 15; 
 let valueTwo = 20; 
+*/  
 
 //* Addition arithmetic operator 
+/*  
 const addition = valueOne + valueTwo; 
-console.log(addition); // Output: 35 
+console.log(addition); //? Output: 35 
+*/ 
 
 //* Subtraction arithmetic operator 
+/* 
 let subtraction = valueOne - valueTwo; 
-console.log(subtraction); // Output : -5 
-
+console.log(subtraction); //? Output : -5 
 subtraction = valueTwo - valueOne; 
-console.log(subtraction);  // Output : 5  
+console.log(subtraction);  //? Output : 5  
+*/ 
 
 //* Multiplication arithmetic operator 
-const multiplyResult = valueOne * valueTwo;  // For multiplication asterisk symbol is used in programming 
-console.log(multiplyResult); // Output: 300 
+/*
+const multiplyResult = valueOne * valueTwo;  //? For multiplication asterisk symbol is used in programming 
+console.log(multiplyResult); //? Output: 300 
+*/
 
 //* Division arithmetic operator 
+/*
 const divisionResult = valueOne / valueTwo;   
-console.log(divisionResult); // Output: 0.75  
+console.log(divisionResult); //? Output: 0.75  
+*/ 
 
 //* Modulus arithmetic operator 
 // Modulus operator is also used for division only but instead of quotient it give output as remainder. 
 // For modulus we used percentage symbol  '%' 
+/*
 const remainder = valueTwo % valueOne; 
-console.log(remainder); // Output: 5  
+console.log(remainder); //? Output: 5  
+*/
 
 //* Exponential Operator 
 // Exponential operator is used to find power of any numbers  for example if we want to find 2 the power 2 which is 2 * 2 = 4  
 // For exponential we used double asterisk symbols '**' 
+/*
+const expoOfTwo = valueOne ** 2;  //? Here behind the scene 15 * 15 = 225  
+console.log(expoOfTwo);  //? Output : 225 
+*/
 
-const expoOfTwo = valueOne ** 2;  // Here behind the scene 15 * 15 = 225  
-console.log(expoOfTwo);  // Output : 225 
+//? Unary Operator 
+// Unary operators are used to perform operations with single operand only. 
+
+// Types of unary operator  
+
+//* 1st. Assignment Operator 
+// Assignment operator in programming is very essential to assign the value to our variables or another identifier in javascript 
+// For assignment operator we used equal symbol '=' symbol   
+// Example of assignment operator 
+let myValue = 25;  //? Here we are using assignment operator to '=' assign the value. 
+// console.log(myValue);  //? Output: 25 
+
+//* 2nd. Increment or Decrement Operators  
+// - This increment and decrement operators are mainly used to increment or decrement value by 1. 
+
+//* Increment Operator  
+// We used increment operator to increase value by 1 of our operand 
+// ++ 'Double Plus' symbol is used to show increment operator 
+//* Increment and Decrement operator of two types 
+// 1st. prefix increment operator 
+//  In postfix increment operator we first increase the value by 1 than evaluate  
+// Example of postfix  :- 
+// ++myValue; 
+// console.log(myValue); //? Output: 26 
+
+// 2nd. postfix increment operator 
+// In prefix we first evaluate the previous value than add by 1 
+// Example of prefix: 
+// console.log(myValue++);  //? Output: 26 
+// Now our value is updated by 1 
+// console.log(myValue); //? Output: 27   
+
+//* Decrement operator 
+// We use decrement operator is used to decrease value by 1 of our operand 
+// For decrement operator we used -- 'double minus' symbol
+
+// 1st. prefix decrement operator 
+// In postfix decrement operator first we update our value than evaluate  
+/*
+--myValue;  
+console.log(myValue); 
+*/
+
+// 2nd. postfix decrement operator 
+// In decrement operator we first evaluate previous value than update by 1  
+/*
+console.log(myValue--); //? Output: 26   
+console.log(myValue); //? Output: 25 
+*/ 
+
+//* 3rd. Arithmetic Unary operator 
+// We can perform the arithmetic unary operation also with single operands 
+//* Unary addition operator
+myValue += 3; 
+console.log(myValue);  // Output: 28 
+//* Unary subtraction operator 
+myValue -=2; 
+console.log(myValue); // Output: 26 
+//* Unary multiplication operator 
+myValue *=4;  
+console.log(myValue); // Output: 104 
+//* Unary division operator 
+myValue /=2; 
+console.log(myValue); // Output: 52  
+//* Unary exponential operator 
+myValue **=2; 
+console.log(myValue); // Output: 2704
+//* Unary modulus operator 
+myValue %=2; 
+console.log(myValue); // Output: 0
 
