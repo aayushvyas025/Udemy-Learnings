@@ -133,67 +133,69 @@ console.log(myValue); //? Output: 25
 // Comparison Operator always return the boolean value true or false 
 
 // Types of Comparison Operator 
+/*
 let valueOne = 25; 
 let valueTwo = 50; 
 let valueThree = 50; 
+*/
 //* Greater than comparison operator 
 //  Greater than operator ">" operator is used to find which operand is greater among two or more operands. 
-let greaterThanResult = valueOne > valueTwo; 
-console.log(greaterThanResult) // Output: false 
+// let greaterThanResult = valueOne > valueTwo; 
+// console.log(greaterThanResult) // Output: false 
 
-greaterThanResult = valueTwo > valueOne; 
-console.log(greaterThanResult); // Output: true  
+// greaterThanResult = valueTwo > valueOne; 
+// console.log(greaterThanResult); // Output: true  
  
-greaterThanResult = valueTwo > valueThree; 
-console.log(greaterThanResult) // Output: false  
+// greaterThanResult = valueTwo > valueThree; 
+// console.log(greaterThanResult) // Output: false  
 
 //* Greater than equal too comparison operator 
 // Greater than equal too ">=" operator also checks the greater than between two or more operands but here it checks another case which is equal too. 
 // If Both operands are similar than it returns true boolean value 
 
 // case 1 
-let greaterThanEqualResult = valueOne >= valueTwo; 
-console.log(greaterThanEqualResult); // Output: false 
+// let greaterThanEqualResult = valueOne >= valueTwo; 
+// console.log(greaterThanEqualResult); // Output: false 
 
 // case 2  
-greaterThanEqualResult = valueTwo >= valueOne; 
-console.log(greaterThanEqualResult); // Output: true  
+// greaterThanEqualResult = valueTwo >= valueOne; 
+// console.log(greaterThanEqualResult); // Output: true  
 
 // case 3 - if both operands 
-greaterThanEqualResult = valueTwo >= valueThree; 
-console.log(greaterThanEqualResult); // Output: true  
+// greaterThanEqualResult = valueTwo >= valueThree; 
+// console.log(greaterThanEqualResult); // Output: true  
 
 //* Smaller than comparison operator 
 // Smaller than "<" operator is used to check smaller operand among two or more than two. 
 
-let smallerThanResult = valueOne < valueTwo; 
-console.log(smallerThanResult);  // Output: true 
+// let smallerThanResult = valueOne < valueTwo; 
+// console.log(smallerThanResult);  // Output: true 
 
-smallerThanResult = valueTwo < valueOne; 
-console.log(smallerThanResult) // Output: false 
+// smallerThanResult = valueTwo < valueOne; 
+// console.log(smallerThanResult) // Output: false 
 
 //* Smaller than equal too comparison operator 
 // Similar like greater than equal too this smaller than equal too "<=" operator is used to check smaller than and equal too between operands 
 
 // case one 
-let smallerThanEqualResult = valueOne <= valueTwo; 
-console.log(smallerThanEqualResult); // Output: true 
+// let smallerThanEqualResult = valueOne <= valueTwo; 
+// console.log(smallerThanEqualResult); // Output: true 
 
 // case two 
-smallerThanEqualResult = valueTwo <= valueOne; 
-console.log(smallerThanEqualResult); // Output: false  
+// smallerThanEqualResult = valueTwo <= valueOne; 
+// console.log(smallerThanEqualResult); // Output: false  
 
 // case three 
-smallerThanEqualResult = valueTwo <= valueThree; 
-console.log(smallerThanEqualResult); // Output: true  
+// smallerThanEqualResult = valueTwo <= valueThree; 
+// console.log(smallerThanEqualResult); // Output: true  
 
 //* typeof operator 
 // typeof operator is in-build method to find the type of data or value , variables 
 // example of  typeof operator 
-let str = 'Aayush'; 
-console.log(typeof valueOne); // Output: Number 
-console.log(typeof valueTwo); // Output: Number 
-console.log(typeof str); // Output: String 
+// let str = 'Aayush'; 
+// console.log(typeof valueOne); // Output: Number 
+// console.log(typeof valueTwo); // Output: Number 
+// console.log(typeof str); // Output: String 
 
 //* Equality comparison operator 
 // This equality operator compare equality between the two operands   
@@ -204,32 +206,32 @@ console.log(typeof str); // Output: String
 // For equality we used "==" equal too operator  
 
 // case one 
-let checkLooseEquality = valueOne == valueTwo;  // 25 == 50 
-console.log(checkLooseEquality);  // Output: false 
+// let checkLooseEquality = valueOne == valueTwo;  // 25 == 50 
+// console.log(checkLooseEquality);  // Output: false 
 // case two 
-checkLooseEquality = valueTwo == valueThree // 50 == 50 
-console.log(checkLooseEquality); // Output: true  
+// checkLooseEquality = valueTwo == valueThree // 50 == 50 
+// console.log(checkLooseEquality); // Output: true  
 
 // case three 
-str = '50'; 
-checkLooseEquality = valueThree == str; // 50 == '50' just only value compares not type 
-console.log(checkLooseEquality); // Output: true 
+// str = '50'; 
+// checkLooseEquality = valueThree == str; // 50 == '50' just only value compares not type 
+// console.log(checkLooseEquality); // Output: true 
 
 //? Strict equality operator 
 // In strict equality operator, we checks both value and type of operands 
 // We used triple equal too "===" for strict equality 
 
 // case one 
-let checkStrictEquality = valueOne === valueTwo;  
-console.log(checkStrictEquality); // Output: false  
+// let checkStrictEquality = valueOne === valueTwo;  
+// console.log(checkStrictEquality); // Output: false  
 
 // case two 
-checkStrictEquality = valueTwo === valueThree; 
-console.log(checkStrictEquality); // Output: true  
+// checkStrictEquality = valueTwo === valueThree; 
+// console.log(checkStrictEquality); // Output: true  
 
 // case three let's check different type 
-checkStrictEquality = valueThree === str; // 50 === '50' different type 
-console.log(checkStrictEquality); // Output: false  
+// checkStrictEquality = valueThree === str; // 50 === '50' different type 
+// console.log(checkStrictEquality); // Output: false  
 
 //* Not Equality comparison operator  
 // Not equality operator is used to checks if operands are not equal to each other or not. 
@@ -240,31 +242,101 @@ console.log(checkStrictEquality); // Output: false
 // We use exclamation and equal to operator "!=" for not equality 
 
 // case one 
-let checkLooseNotEqual = valueOne != valueTwo; // 25 != 50 
-console.log(checkLooseNotEqual); // Output: true  
+// let checkLooseNotEqual = valueOne != valueTwo; // 25 != 50 
+// console.log(checkLooseNotEqual); // Output: true  
 
 // case two 
-checkLooseNotEqual = valueTwo != valueThree; 
-console.log(checkLooseNotEqual); // Output: false  
+// checkLooseNotEqual = valueTwo != valueThree; 
+// console.log(checkLooseNotEqual); // Output: false  
 
 // case three checking with other type  
-checkLooseNotEqual = valueOne != str;  // 25 != '50' 
-console.log(checkLooseNotEqual); // Output: true 
+// checkLooseNotEqual = valueOne != str;  // 25 != '50' 
+// console.log(checkLooseNotEqual); // Output: true 
 
 //? Strict not equality operator 
 // strict not equality operator checks both types and value 
 // for strict equality exclamation & double equal too operator "!==" 
 
 // case one 
-let checkStrictNotEqual = valueOne !== valueTwo; // 25 !== 50 
-console.log(checkStrictNotEqual); // Output: true 
+// let checkStrictNotEqual = valueOne !== valueTwo; // 25 !== 50 
+// console.log(checkStrictNotEqual); // Output: true 
 
 // case two 
-checkStrictNotEqual = valueTwo !== valueThree;  
-console.log(checkStrictNotEqual); // Output: false  
+// checkStrictNotEqual = valueTwo !== valueThree;  
+// console.log(checkStrictNotEqual); // Output: false  
 
 // case three with different type 
-checkStrictNotEqual = valueOne !== str;  // 25 !== '50' 
-console.log(checkStrictNotEqual); // Output: true 
+// checkStrictNotEqual = valueOne !== str;  // 25 !== '50' 
+// console.log(checkStrictNotEqual); // Output: true 
  
+//* Logical Operator 
+// Logical operators perform the logical operations for our program 
+// This logical operator is based on logical gates of digital electronics 
+// This logical operator also return the boolean value. 
+
+// Types of logical operator 
+
+//? AND Logical operator 
+// In AND Logical operator all the operands should be true or all the condition should be true 
+// For AND logical operator we use double ampersand symbol '&&' 
+
+// Example : 
+// Case One :If the person is citizen of country and adult greater than equal to 18 than they eligible for vote 
+let countryCitizen = true; 
+let isAdult =  true; 
+console.log(countryCitizen && isAdult); // Output: true 
+
+// Case Two: if the person is not citizen of country but adult 
+countryCitizen = false; 
+console.log(countryCitizen && isAdult); // Output: false 
+
+// Case Three: if the person is citizen of country but not adult 
+countryCitizen = true; 
+isAdult = false;
+console.log(countryCitizen && isAdult); // Output: false 
+
+// Case Four: if the person not citizen of country and not adult also 
+countryCitizen = false; 
+isAdult = false; 
+console.log(countryCitizen && isAdult); // Output: false 
+
+//? OR Operator 
+// OR Logical operator return true if single value or single condition should be true otherwise it returns false 
+// For OR Logical operator we used two pipes "||" symbol operator  
+// Example 
+//  User have two options to logged-in 
+// first is applicationAuth and second is through google logged in 
+// Case One 
+let isAppAuthLogin = false; 
+let isGoogleLogin = true; 
+console.log(isAppAuthLogin || isGoogleLogin); // Output: true, because google login 
+
+// Case Two 
+isAppAuthLogin = true; 
+isGoogleLogin = false; 
+console.log(isAppAuthLogin || isGoogleLogin); // Output: true, because app auth login 
+
+// Case Three 
+// By-chance  user is logged in with both methods (In general not possible) 
+isAppAuthLogin = true; 
+isGoogleLogin = true; 
+console.log(isAppAuthLogin || isGoogleLogin); // Output: true  
+
+// Case Three 
+isAppAuthLogin = false; 
+isGoogleLogin = false; 
+console.log(isAppAuthLogin || isGoogleLogin); // Output: false 
+
+//? Not Logical operator 
+//  This Not Logical operator just returns the opposite boolean value of our operand
+// For Not Logical operator we used exclamation mark symbol  
+console.log(!isAdult); // Output: true 
+console.log(!countryCitizen); // Output: false 
+
+
+
+
+
+
+
 
