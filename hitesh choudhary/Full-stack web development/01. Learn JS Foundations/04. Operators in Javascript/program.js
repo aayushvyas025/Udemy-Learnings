@@ -187,13 +187,84 @@ console.log(smallerThanEqualResult); // Output: false
 smallerThanEqualResult = valueTwo <= valueThree; 
 console.log(smallerThanEqualResult); // Output: true  
 
-//? typeof operator 
+//* typeof operator 
 // typeof operator is in-build method to find the type of data or value , variables 
 // example of  typeof operator 
-const str = 'Aayush'; 
+let str = 'Aayush'; 
 console.log(typeof valueOne); // Output: Number 
 console.log(typeof valueTwo); // Output: Number 
 console.log(typeof str); // Output: String 
 
 //* Equality comparison operator 
-// This 
+// This equality operator compare equality between the two operands   
+// Equality operator are of two types 
+
+//? loose equality operator 
+//  Loose equality operator only checks the value of operands not it's type 
+// For equality we used "==" equal too operator  
+
+// case one 
+let checkLooseEquality = valueOne == valueTwo;  // 25 == 50 
+console.log(checkLooseEquality);  // Output: false 
+// case two 
+checkLooseEquality = valueTwo == valueThree // 50 == 50 
+console.log(checkLooseEquality); // Output: true  
+
+// case three 
+str = '50'; 
+checkLooseEquality = valueThree == str; // 50 == '50' just only value compares not type 
+console.log(checkLooseEquality); // Output: true 
+
+//? Strict equality operator 
+// In strict equality operator, we checks both value and type of operands 
+// We used triple equal too "===" for strict equality 
+
+// case one 
+let checkStrictEquality = valueOne === valueTwo;  
+console.log(checkStrictEquality); // Output: false  
+
+// case two 
+checkStrictEquality = valueTwo === valueThree; 
+console.log(checkStrictEquality); // Output: true  
+
+// case three let's check different type 
+checkStrictEquality = valueThree === str; // 50 === '50' different type 
+console.log(checkStrictEquality); // Output: false  
+
+//* Not Equality comparison operator  
+// Not equality operator is used to checks if operands are not equal to each other or not. 
+// Not equality operator is also of two types  
+
+//? Loose not equality comparison operator 
+// loose not equality operator checks only value of our operands not it's type. 
+// We use exclamation and equal to operator "!=" for not equality 
+
+// case one 
+let checkLooseNotEqual = valueOne != valueTwo; // 25 != 50 
+console.log(checkLooseNotEqual); // Output: true  
+
+// case two 
+checkLooseNotEqual = valueTwo != valueThree; 
+console.log(checkLooseNotEqual); // Output: false  
+
+// case three checking with other type  
+checkLooseNotEqual = valueOne != str;  // 25 != '50' 
+console.log(checkLooseNotEqual); // Output: true 
+
+//? Strict not equality operator 
+// strict not equality operator checks both types and value 
+// for strict equality exclamation & double equal too operator "!==" 
+
+// case one 
+let checkStrictNotEqual = valueOne !== valueTwo; // 25 !== 50 
+console.log(checkStrictNotEqual); // Output: true 
+
+// case two 
+checkStrictNotEqual = valueTwo !== valueThree;  
+console.log(checkStrictNotEqual); // Output: false  
+
+// case three with different type 
+checkStrictNotEqual = valueOne !== str;  // 25 !== '50' 
+console.log(checkStrictNotEqual); // Output: true 
+ 
+
