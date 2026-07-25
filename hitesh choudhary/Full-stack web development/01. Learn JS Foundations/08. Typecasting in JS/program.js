@@ -57,4 +57,4 @@ console.log(Number(false), typeof Number(false)); // Output: 0 , number
 //? NaN case 
 console.log(Number(undefined)); // Output: NaN 
 
-//! Explicit type conversion are more preferable because conversion control are of developers hand 
+//! Explicit type conversion are more preferable because conversion controls are in developers hand 
