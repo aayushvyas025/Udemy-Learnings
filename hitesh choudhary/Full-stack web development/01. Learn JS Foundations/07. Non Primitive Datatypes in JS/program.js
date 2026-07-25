@@ -94,4 +94,13 @@ let dateObj =  Date();
 console.log(dateObj); 
 
 dateObj = new Date(); 
-console.log(dateObj); 
+console.log(dateObj);  
+
+//! In Javascript every things is a object. 
+
+//? Object is also categorized  or sub-divided into more non-primitives types  
+// Some more non-primitive types 
+// 1. Arrays  
+// 2. Functions   etc.  
+
+
