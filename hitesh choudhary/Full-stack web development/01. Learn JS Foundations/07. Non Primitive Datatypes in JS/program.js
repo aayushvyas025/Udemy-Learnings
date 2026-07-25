@@ -103,4 +103,33 @@ console.log(dateObj);
 // 1. Arrays  
 // 2. Functions   etc.  
 
+//* Arrays  
+// -> Arrays are also non-primitive data types which also stored more than single data (primitive) for complex data structure 
+// -> In arrays data are stored in adjacent contiguous manner 
+// -> Javascript is dynamically in nature, so we can stored multiple types data in our array.  
+
+//? Example of Arrays 
+const myArr = ['Aayush', 'Saijal', 'Kratik'];  // Output: [ 'Aayush', 'Saijal', 'Kratik' ]
+//* In Javascript we create array with square brackets 
+
+console.log(myArr);  
+
+//* Arrays are hav indexing which start from 0 and goes to length of an array - 1 which is n - 1  
+
+//? Access the length of our array 
+console.log(myArr.length); // Output: 3 it means have 3 elements in it.  
+
+//? Accessing the array elements  with index  
+// For accessing array element we need bracket notation 
+console.log(myArr[0]); // Output: Aayush    //* Indexing starting with  0  
+console.log(myArr[1]); // Output: Saijal  
+console.log(myArr[2]);  // Output: Kratik  //* Indexing ending with length - 1 "n-1" at 2 
+
+//? Update or Change the elements 
+// Update or access also done by bracket notation 
+ myArr[0] = "Shaktiman"; 
+ myArr[1] = "He-man"; 
+
+ console.log(myArr);   // Output: [ 'Shaktiman', 'He-man', 'Kratik' ]
+
 
