@@ -71,7 +71,7 @@ if (strOne === strTwo) {
 
 //* 3rd. Check if the variable is number or not.
 let variable = 25;
-variable = '25';
+variable = "25";
 variable = true;
 if (typeof variable === "number") {
   console.log(`Given variable contains number`);
@@ -79,25 +79,28 @@ if (typeof variable === "number") {
   console.log(`Given variable does not contain number`);
 }
 
-//* 4th. Checking if the boolean value is true or false 
+//* 4th. Checking if the boolean value is true or false
 
-let isLogin = true;  
-isLogin = false; 
+let isLogin = true;
+isLogin = false;
 
-if(isLogin) {
-    console.log('User is logged in');
-}else {
-    console.log('User is not logged in')
-}  
-
-//* 5th. Checking if an array is empty or not. 
-let myArr = []; 
-
-// To check if the array is empty or not we need to check length of an array. 
-//? For that we need to use array's .length property 
-if(myArr.length === 0) {
-    console.log(`array is empty`);
-}else {
-    console.log(`array is not empty`);
+if (isLogin) {
+  console.log("User is logged in");
+} else {
+  console.log("User is not logged in");
 }
 
+//* 5th. Checking if an array is empty or not.
+let myArr = [];
+
+// To check if the array is empty or not we need to check length of an array.
+//? For that we need to use array's .length property
+// When array length is 0 that means array having no elements
+
+// myArr = ["item 1", "item 2", "item 3"];  //* When array have elements in it.
+
+if (myArr.length === 0) {
+  console.log(`array is having no elements`);
+} else {
+  console.log(`array is having elements`);
+}
