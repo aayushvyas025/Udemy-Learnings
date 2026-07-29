@@ -66,4 +66,85 @@ let teaOrders = ['chai', 'iced-tea', 'matcha', 'earl-grey'];
 
 //? With the help of pop method we can remove the last element  of an array.  
 const lastOrder = teaOrders.pop(3);
-console.log(lastOrder); 
+console.log(lastOrder);  
+
+/* Challenge 6: 
+You have an array named 'popularTeas' containing 'green tea',  'oolong tea',  and 'chai'. 
+Create the a soft copy of this array named 'softCopyTeas'  
+ */
+
+const popularTeas = ['green tea', 'oolong tea', 'chai'];  
+const softCopyTeas = popularTeas; 
+console.log("popularTeas = ",popularTeas); // Output: ['green tea', 'oolong tea', 'chai'];  
+console.log("softCopyTeas = ",softCopyTeas);  // Output: ['green tea', 'oolong tea', 'chai'];
+
+//? soft-copy is that which also change according to original data structure change  
+popularTeas.pop(2); 
+console.log("popularTeas = ", popularTeas);  // Output: [ 'green tea', 'oolong tea' ] 
+console.log("softCopyTeas = ",softCopyTeas); // Output: [ 'green tea', 'oolong tea' ]  
+
+/* Challenge 7: 
+You have an array named 'topCities' containing 'Berlin', 'Singapore', and 'New York'. 
+Create a hard copy of this array named hardCopyCities  
+ */  
+
+const topCities = ['Berlin', 'Singapore', 'New York']; 
+
+const hardCopyTopCities = new Array('Berlin', 'Singapore', 'New York');  
+//? We create a separate array with unique original memory space with 'new' keyword. 
+console.log("top cities original ", topCities); 
+console.log("hard copy top cities ", hardCopyTopCities); 
+
+// pop out one element from original top cities array 
+topCities.pop(); 
+console.log("top cities original ", topCities); 
+console.log("hard copy top cities ", hardCopyTopCities);   
+
+//! Another method is Spread operator  '...' 
+//* We have spread operator which spread non-primitive data into another non-primitive  
+const hardCopyTopCitiesSecond = [...topCities]; 
+console.log(hardCopyTopCitiesSecond); 
+
+// pop out another element from original top cities array 
+topCities.pop(); 
+console.log("top cities = ", topCities); // Output:  [ 'Berlin' ] 
+console.log("hard copy top cities second = ", hardCopyTopCitiesSecond);  //  Output:  [ 'Berlin', 'Singapore' ]  
+
+/* Challenge 8: 
+You have an arrays: 'europeanCities' containing 'Paris' and 'Rome' and 'asianCities' containing 'Tokyo' and 'Bangkok'. Merge these two arrays named worldCities  
+  */ 
+
+//* europeanCities array 
+const europeanCities = ['Paris', 'Rome'];  
+//* asianCities array 
+const asianCities = ['Tokyo', 'Bangkok'];  
+
+// We have couples of method to merge our array 
+//? spread operator '...'  
+const worldCities = [...europeanCities, ...asianCities]; 
+console.log("worldCities  = ",worldCities);  
+
+//? array's concat method 
+// we have .concat method to concat two arrays 
+const worldCitiesSecond = europeanCities.concat(asianCities);  
+console.log("worldCitiesSecond = ",worldCitiesSecond);  
+
+/* Challenge 9: 
+You have an array named 'teaMenu' containing 'masala chai',  'oolong tea',  'green tea', and 'earl grey'. 
+Find the length of the array and store it in a variable named 'menuLength'    
+ */ 
+
+const teaMenu = ['masala chai', 'oolong tea', 'green tea', 'earl grey']; 
+const menuLength = teaMenu.length; 
+console.log("teaMenu = ", teaMenu); 
+console.log(`menu length is ${menuLength}`) // Output : menu length is 4 
+
+/* Challenge 10: 
+You have an array named 'cityBucketList' containing 'Kyoto', 'London', 'Cape town', and 'Vancouver' 
+Check if 'London' is in the array and store the result in a variable named 'isLondonInList'    
+ */
+const cityBucketList = ['Kyoto', 'London', 'Cape Town', 'Vancouver']; 
+
+//? To check if the array have any specific element in it or not for that we have to use .includes method 
+let isLondonInList = cityBucketList.includes('London' || 'london');  //* .includes 
+console.log(isLondonInList); // Output: true 
