@@ -3,7 +3,7 @@
 
 //? Encapsulation
 /**
- * Encapsulation is Object Oriented Programming concepts which restricts the direct access data of Object.
+ * Encapsulation is Object Oriented Programming concepts which restricts the direct access data of our classes.
  */
 
 //* Understand with example
@@ -38,11 +38,6 @@ class BankAccount {
     return this.#userBalance;
   }
 
-  //* To get restricts properties we have to use getter function
-  /**
-   * We just add get keyword as prefix in our method, mainly we used getter function to get or retrieve the private properties
-   *
-   */
   getBalance() {
     // Now if we don't want to access the original type we can wrap inside the string
     return `₹ ${this.#userBalance.toLocaleString()} amount in your ${this.bankAccountType} bank account`;
@@ -130,85 +125,154 @@ class MathsOperation {
   }
 
   findEven() {
-    return this.numbers.filter((number) => number % 2 === 0 );
+    return this.numbers.filter((number) => number % 2 === 0);
   }
 
   findOdd() {
-    return this.numbers.filter((number) => number % 2 !== 0 );
+    return this.numbers.filter((number) => number % 2 !== 0);
   }
 }
 
-const numbers = new MathsOperation(2, 4, 3, 1, 4); 
-const addition = numbers.addNumbers(); 
-console.log("Addition = ",addition); 
-const subtraction = numbers.subtractNumbers(); 
-console.log("Subtraction = ", subtraction); 
-const oddNumbers = numbers.findOdd(); 
-console.log("Odd Numbers = ", oddNumbers); 
-const evenNumbers = numbers.findEven(); 
+const numbers = new MathsOperation(2, 4, 3, 1, 4);
+const addition = numbers.addNumbers();
+console.log("Addition = ", addition);
+const subtraction = numbers.subtractNumbers();
+console.log("Subtraction = ", subtraction);
+const oddNumbers = numbers.findOdd();
+console.log("Odd Numbers = ", oddNumbers);
+const evenNumbers = numbers.findEven();
 console.log("Event Numbers = ", evenNumbers);
 
-//? Polymorphism 
-/** 
- * Polymorphism is the most important and essential Object Oriented Programming Concept. It describes the ability of something to have or be displayed in more than one form   
+//? Polymorphism
+/**
+ * Polymorphism is the most important and essential Object Oriented Programming Concept. It describes the ability of something to have or be displayed in more than one form
  */
 
-//* Let understand polymorphism with example 
+//* Let understand polymorphism with example
 class Animal {
-    constructor(name,type ) {
-        this.name=name;
-        this.type=type 
-    }
-} 
+  constructor(name, type) {
+    this.name = name;
+    this.type = type;
+  }
+}
 
 class Bird extends Animal {
-    isFly() {
-        console.log(`Flying.....`)
-    }
+  isFly() {
+    console.log(`Flying.....`);
+  }
 }
 
 class FlightlessBird extends Bird {
-    isFly() {
-        console.log(`Can't Fly`)
-    }
-}    
+  isFly() {
+    console.log(`Can't Fly`);
+  }
+}
 
-/** 
- * * In above classes we have same method with different form  
- */ 
+/**
+ * * In above classes we have same method with different form
+ */
 
-const eagle = new Bird("Bald Eagle", "bird")
-const ostrich = new FlightlessBird("Somali Ostrich", "bird"); 
+const eagle = new Bird("Bald Eagle", "bird");
+const ostrich = new FlightlessBird("Somali Ostrich", "bird");
 
-//* Let's see the methods we created 
-eagle.isFly();  // Output: Flying.... 
-ostrich.isFly(); // Output: Can't Fly  
+//* Let's see the methods we created
+eagle.isFly(); // Output: Flying....
+ostrich.isFly(); // Output: Can't Fly
 
-//? static keyword 
-/** 
- * - static keyword is the special type of keywords which make the classes methods and properties static which are accessible inside the classes and also access by class only. 
- * - this static methods and classes are not accessible by objects.   
+//? static keyword
+/**
+ * - static keyword is the special type of keywords which make the classes methods and properties static which are accessible inside the classes and also access by class only.
+ * - this static methods and classes are not accessible by objects.
  */
 
 class Calculator {
-    static addNumber(...numbers) { 
-        return numbers.reduce((sum, number) => sum + number, 0); 
-    }
+  static addNumber(...numbers) {
+    return numbers.reduce((sum, number) => sum + number, 0);
+  }
 
-    static findExponential(number, power) {
-        return number ** power; 
-    }
+  static findExponential(number, power) {
+    return number ** power;
+  }
 }
 
-const calc = new Calculator();  
+const calc = new Calculator();
 
-// let try access the method from the object  
-console.log(calc.addNumber);  // Output: giving error undefined  
+// let try access the method from the object
+console.log(calc.addNumber); // Output: giving error undefined
 
-// Let access by the class it-self 
+// Let access by the class it-self
 
-const exponentValue = Calculator.findExponential(5, 2); 
-console.log(exponentValue); // Output: 25 
+const exponentValue = Calculator.findExponential(5, 2);
+console.log(exponentValue); // Output: 25
 
-const sumValue = Calculator.addNumber(10, 20); 
-console.log(sumValue); // Output: 30   
+const sumValue = Calculator.addNumber(10, 20);
+console.log(sumValue); // Output: 30
+
+//? Getter and Setter Methods
+/**
+ *   getter and setter methods give more control over our classes private properties and methods.
+ * * getter and setter methods help to access the private properties member for retrieve and setting the value.
+ */
+class Employees {
+  #salary = 0;
+  #bonus = 0;
+  #incomePerAnnum = 0;
+
+  constructor(employeeName, employeeDepartment, employeePosition, salary) {
+    if (salary < 0) {
+      throw new Error("Please Enter value in positive");
+    }
+    this.employeeName = employeeName;
+    this.employeeDepartment = employeeDepartment;
+    this.employeePosition = employeePosition;
+    this.#salary = salary;
+    // we can access like this also but not access directly with Object
+  }
+
+  /**
+   * ? We are using set and get keywords to create setter and getter methods
+   *
+   */
+  //* set keyword to set the salary due to private member of the class
+  set salary(value) {
+    if (value < 0) {
+      throw new Error("Please Enter value in positive");
+    }
+    this.#salary += value;
+    return this.#salary;
+  }
+  //* get keyword to get the salary due to private member of the class
+  get salary() {
+    return `Your salary is ${this.#salary.toLocaleString()} per month`;
+  }
+
+  set incomePerAnnum(salary) {
+    this.#incomePerAnnum = salary * 12;
+    return this.#incomePerAnnum;
+  }
+
+  get incomePerAnnum() {
+    return `Your income Per Annum ${this.#incomePerAnnum.toLocaleString()}`;
+  }
+
+  set bonus(value) {
+    if(value < 0) {
+        throw new Error("Please Enter value in positive")
+    } 
+
+    this.#bonus += value; 
+    return this.#bonus; 
+  }
+}
+
+const firstEmployee = new Employees(
+  "Aayush Vyas",
+  "Software Engineer",
+  "Fullstack Developer",
+  45000,
+);
+
+console.log(firstEmployee);
+console.log(firstEmployee.salary);
+firstEmployee.incomePerAnnum = 45000; 
+console.log(firstEmployee.incomePerAnnum);  
