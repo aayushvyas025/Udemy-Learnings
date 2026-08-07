@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript DOM and BOM Basics in Javascript</title>
+    <style>
+      body {
+        background-color: black;
+        color: white;
+        font-family: cursive;
+      }
+    </style>
+    <!--! Problem with Javascript is non-blocking execution so it's execute if the browser html and css document parsing completed or not.  -->
+    <script>
+        console.log("Hello from the script tag which inside the head tag"); 
+    </script>
+  </head>
+  <body>
+    <h1>
+      DOM `Document Object Model` and BOM `Browser Object Model` Basics in
+      Javascript
+    </h1>
+  </body>
+  <script>
+    console.log("Hello World from the script tag after the body element")
+  </script>
+  <!--? Here we link the external Javascript file with our html tag -->
+  <!--! script tag  -->
+  <!-- script tag is used to write javascript in our html file or we have src 'source' attribute to add external javascript file.  -->
+  <script defer src="./01. DOM and BOM Basics in Javascript/program.js"></script>
+  <!--* We have Three ways to add javascript in our html --> 
+  <!-- 1. inline javascript: injected directed to single html element. -->
+  <!-- 2. Using script tag, where we can add in head and body of our html  -->
+   <!--? defer is the `attribute` which help to download javascript file in the background upto browser parsing the html document.  -->
+</html>
