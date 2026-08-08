@@ -9,28 +9,99 @@
         background-color: black;
         color: white;
         font-family: cursive;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      .green {
+        background-color: #25b125;
+        font-weight: bold;
+        color: #fff;
+        padding: 5px;
+        border-radius: 5px;
+      }
+
+      .highlight {
+        background-color: yellow;
+        font-weight: bold;
+        color: #1a1a1a;
+      }
+
+      .hidden {
+        display: none;
       }
     </style>
     <!--! Problem with Javascript is non-blocking execution so it's execute if the browser html and css document parsing completed or not.  -->
-    <script>
+    <!-- <script>
         console.log("Hello from the script tag which inside the head tag"); 
-    </script>
+    </script> -->
   </head>
   <body>
-    <h1>
+    <!--* This code is for Introduction to Javascript BOM and DOM  -->
+    <!-- <h1>
       DOM `Document Object Model` and BOM `Browser Object Model` Basics in
       Javascript
-    </h1>
+    </h1> -->
+
+    <h1>Javascript DOM Fun Challenges</h1>
+    <!-- Example 1: Accessing DOM Elements -->
+    <section id="example-1">
+      <h2 class="green">Accessing DOM Elements</h2>
+      <p id="myParagraph">
+        This is a paragraph. Click the button to change me!
+      </p>
+      <button id="changeTextButton">Change Text Button</button>
+    </section>
+    <!-- Example 2: Traversing a DOM  -->
+    <section id="example-2">
+      <h2 class="green">Traversing the DOM</h2>
+      <ul id="citiesList">
+        <li>New York</li>
+        <li>Tokyo</li>
+        <li>Paris</li>
+        <li>Tokyo</li>
+      </ul>
+      <button id="highlightFirstCity">Highlight First City</button>
+    </section>
+    <!--  Example 3 - Manipulating a DOM Elements -->
+    <section id="example-3">
+      <h2 class="green">Manipulating a DOM Elements:</h2>
+      <div id="coffeeOrder">Order: <span id="coffeeType"> Latte </span></div>
+      <button id="changeOrder">Change Order to Espresso</button>
+    </section>
+    <!-- Example 4 - Creating and Inserting Element -->
+    <section id="example-4">
+      <h2 class="green">Creating and Inserting Example</h2>
+      <button id="addNewItem">Add a new item to the shopping list</button>
+      <ul id="shoppingList">
+        <li>Bread</li>
+        <li>Milk</li>
+      </ul>
+    </section>
+    <!-- Example 5 - Removing DOM Elements -->
+    <section id="example-5">
+      <h2 class="green">Removing DOM Elements</h2>
+      <ul id="taskList">
+        <li>Task 1</li>
+        <li>Task 2</li>
+        <li>Task 3</li>
+      </ul>
+      <button id="removeTaskList">Remove Last Task</button>
+    </section>
   </body>
-  <script>
+  <!-- <script>
     console.log("Hello World from the script tag after the body element")
-  </script>
+  </script> -->
   <!--? Here we link the external Javascript file with our html tag -->
   <!--! script tag  -->
   <!-- script tag is used to write javascript in our html file or we have src 'source' attribute to add external javascript file.  -->
-  <script defer src="./01. DOM and BOM Basics in Javascript/program.js"></script>
-  <!--* We have Three ways to add javascript in our html --> 
+  <!-- <script defer src="./01. DOM and BOM Basics in Javascript/program.js"></script> -->
+  <!-- <script src="program.js"></script> -->
+  <!--* We have Three ways to add javascript in our html -->
   <!-- 1. inline javascript: injected directed to single html element. -->
   <!-- 2. Using script tag, where we can add in head and body of our html  -->
-   <!--? defer is the `attribute` which help to download javascript file in the background upto browser parsing the html document.  -->
+  <!--? defer is the `attribute` which help to download javascript file in the background upto browser parsing the html document.  -->
+  <script defer src="./02. Solving 5 Challenges in DOM/program.js"></script>
 </html>
