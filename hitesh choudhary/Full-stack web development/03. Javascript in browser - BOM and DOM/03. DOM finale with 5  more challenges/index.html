@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Finale 5 more challenges</title>
+    <style>
+      body {
+        background-color: #111;
+        color: #fff;
+        font-family: cursive;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      .green {
+        background-color: #25b125;
+        font-weight: bold;
+        color: #fff;
+        padding: 5px;
+        border-radius: 5px;
+      }
+
+      .highlight {
+        background-color: yellow;
+        font-weight: bold;
+        color: #1a1a1a;
+      }
+
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>DOM Finale 5 more challenges</h1>
+    <!-- Example First:  -->
+    <section id="example-one">
+      <h2 class="green">Event Handling in the DOM</h2>
+      <button id="clickMeButton">Click Me!</button>
+    </section>
+    <!-- Example Second: -->
+    <section id="example-two">
+      <h2 class="green">Event Delegation</h2>
+      <ul id="teaList">
+        <li class="teaItems">Green Tea</li>
+        <li class="teaItems">Black Tea</li>
+        <li class="teaItems">Oolong tea</li>
+      </ul>
+      <p>Click on any tea to select it</p>
+    </section>
+    <!-- Example Third:  -->
+    <section id="example-three">
+      <h2 class="green">Form Handling</h2>
+      <form id="feedbackForm">
+        <label for="feedbackInput">Your Feedback :</label>
+        <input
+          type="text"
+          id="feedbackInput"
+          placeholder="Enter feedback"
+        />
+        <button type="submit">Submit Feedback</button>
+      </form>
+      <p id="feedbackDisplay"></p>
+    </section>
+    <!-- Example Fourth -->
+    <section id="example-four">
+      <h2 class="green">DOM Content Loaded</h2>
+      <p id="domStatus">Waiting for DOM to load...</p>
+    </section> 
+    <!-- Example Fifth --> 
+     <div id="example-fifth">
+      <h2 class="green">CSS Classes Manipulation</h2> 
+      <p id="descriptionText">This text will change color!</p> 
+      <button id="toggleHighlight">Toggle Highlight</button>
+     </div>
+  </body>
+  <script src="script.js"></script>
+</html>
