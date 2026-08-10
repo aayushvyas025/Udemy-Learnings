@@ -2,9 +2,9 @@
 
 /**
  * * What is Closures ?
- *  - Closures is a mechanism in the function which have access of local variables of it's outer scope when the outer scope or parent scope function is executed
+ *  - Closures is created when the function retains the access of local variables of it's outer scope even the outer scope function is executed.
  *
- *  -  It stored those local variables as the memory in the mind and executed with it.
+ *  -  The inner function maintains a reference of the variables it uses from its surrounding lexical environment. 
  *
  *  - This is due to javascript lexically scoped language, meaning that variable visibility and accessibility determined entirely by the location of the variables and blocks with-in  the source code at compile time.
  *
@@ -16,7 +16,7 @@
  *
  */
 
-function counter() {
+function counterOne() {
   let count = 0; // This is local variable of counter function
   return function () {
     // this return function have the access of count local variable.
@@ -24,10 +24,21 @@ function counter() {
   };
 }
 
-const increment = counter();
+const increment = counterOne();
 
-for (let idx = 0; idx < 100; idx++) {
-  increment();
+function counterTwo() {
+    let count = 100; 
+    return function() {
+       if(count >= 0) {
+           console.log(--count); 
+
+       }
+    }
+}
+
+const decrement = counterTwo();
+for(let number = 0; number > 0; number++) {
+    decrement(); 
 }
 
 
