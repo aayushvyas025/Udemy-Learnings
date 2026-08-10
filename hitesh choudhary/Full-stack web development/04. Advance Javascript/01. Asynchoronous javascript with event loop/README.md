@@ -38,4 +38,4 @@ greet();
 - **micro-task queue** is for high priority asynchronous code this queue code loaded first in call-stack. 
 - **macro-task queue** is for low priority asynchronous code this is regular queue which loaded asynchronous code loaded not that high priority operation in call-stack. 
 
-`Here to understand this Asynchronous code always executed after Synchronous code.`
+`Here to understand this Asynchronous code always execute after Synchronous code executed.`
