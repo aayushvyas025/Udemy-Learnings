@@ -65,7 +65,7 @@ console.log(numGenerator.next()); // Output: {value:undefined, done:true}
  *        return {
  *            next:function()  {
  *                     logic of iterable
- *
+ *                     which returns object {value:data, done:true/false}
  *                 }
  *          }
  *
