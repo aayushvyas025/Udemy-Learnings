@@ -10,8 +10,8 @@ document.addEventListener("DOMContentLoaded", function () {
   let totalAmount = calculateExpenses();
 
   // validation
-  function checkItemExist(title) {
-    return expenses.some((expense) => expense.title === title);
+  function checkItemExist(item) {
+    return expenses.some((expense) => expense.id === item.id);
   }
 
   function validateInputs(title, amount) {
@@ -21,21 +21,18 @@ document.addEventListener("DOMContentLoaded", function () {
       title === null ||
       amount === null
     ) {
-      alert(`Title and Amount both required`);
-      return false;
+      return { isValid: false, message: `Title and Amount both required` };
     }
 
     if (!title.trim() || typeof title !== "string") {
-      alert(`Expense Title required`);
-      return false;
+      return { isValid: false, message: `Expense Title required` };
     }
 
     if (typeof amount !== "number" || isNaN(amount) || amount <= 0) {
-      alert(`Expense Amount required`);
-      return false;
+      return { isValid: false, message: `Expense Amount required` };
     }
 
-    return true;
+    return { isValid: true, message: `Validate successfully` };
   }
 
   // features
@@ -44,23 +41,37 @@ document.addEventListener("DOMContentLoaded", function () {
     localStorage.setItem("expenses", JSON.stringify(list));
   }
 
-  function calculateExpenses() {}
+  function calculateExpenses(total) {
+    // if (!total || typeof total !== "number") return;
+    // let calculateAmount = 0;
+    // calculateAmount += total;
+    // return calculateAmount;
+    // Instead of this we have to use reducer method
+  }
 
   // Event listener
   expenseForm.addEventListener("submit", function (event) {
     event.preventDefault();
 
     const title = expenseTitle.value.trim();
-    const amount = parseFloat(expenseAmount.value.trim()).toFixed(2);
-    const isExist = checkItemExist(title);
+    const amount = parseFloat(expenseAmount.value.trim());
+    const { isValid, message } = validateInputs(title, amount);
+
+    if (!isValid) {
+      alert(message);
+      return;
+    }
+
+    const newExpense = { id: Date.now(), title, amount: amount.toFixed(2) };
+
+    const isExist = checkItemExist(newExpense);
     if (isExist) {
       alert(`${title} is already exist in expense list`);
       return;
     }
 
-    const isValidate = validateInputs(title, amount);
-
-    expenses.push({ title, amount });
+    expenses.push(newExpense);
     saveExpenses(expenses);
+    
   });
 });
