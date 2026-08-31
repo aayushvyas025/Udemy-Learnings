@@ -7,11 +7,10 @@ document.addEventListener("DOMContentLoaded", function () {
   const expenseList = document.getElementById("expense-list");
   const totalExpense = document.getElementById("total-amount");
   let expenses = JSON.parse(localStorage.getItem("expenses")) || [];
-  let totalAmount = calculateExpenses();
 
   // validation
-  function checkItemExist(item) {
-    return expenses.some((expense) => expense.id === item.id);
+  function checkItemExist(title) {
+    return expenses.some((expense) => expense.title === title);
   }
 
   function validateInputs(title, amount) {
@@ -41,13 +40,42 @@ document.addEventListener("DOMContentLoaded", function () {
     localStorage.setItem("expenses", JSON.stringify(list));
   }
 
-  function calculateExpenses(total) {
-    // if (!total || typeof total !== "number") return;
-    // let calculateAmount = 0;
-    // calculateAmount += total;
-    // return calculateAmount;
-    // Instead of this we have to use reducer method
+  function calculateExpenses(expenses) {
+    return expenses.reduce(
+      (accumulator, expense) => accumulator + Number(expense.amount),
+      0,
+    );
   }
+
+  function deleteExpenseItem(event) {
+    if (event.target.tagName === "BUTTON") {
+      const expenseId = parseInt(event.target.getAttribute("data-id"));
+      expenses = expenses.filter((expense) => expense.id !== expenseId);
+      saveExpenses(expenses);
+      renderExpensesList();
+    }
+  }
+
+  function renderTotalExpense() {
+    const totalAmount = calculateExpenses(expenses);
+    totalExpense.textContent = String(totalAmount.toFixed(2));
+  }
+
+  function renderExpensesList() {
+    expenseList.innerHTML = "";
+    expenses.forEach((expense) => {
+      const expenseItem = document.createElement("li");
+      expenseItem.innerHTML = `${expense.title} - $${expense.amount}  <button data-id=${expense.id}>Delete Item</button>`;
+      expenseList.appendChild(expenseItem);
+
+      const deleteButton = expenseItem.querySelector("button");
+      deleteButton.addEventListener("click", deleteExpenseItem);
+    });
+
+    renderTotalExpense();
+  }
+
+  renderExpensesList();
 
   // Event listener
   expenseForm.addEventListener("submit", function (event) {
@@ -62,16 +90,19 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
 
-    const newExpense = { id: Date.now(), title, amount: amount.toFixed(2) };
-
-    const isExist = checkItemExist(newExpense);
+    const isExist = checkItemExist(title);
     if (isExist) {
       alert(`${title} is already exist in expense list`);
       return;
     }
 
+    const newExpense = { id: Date.now(), title, amount: amount.toFixed(2) };
+
     expenses.push(newExpense);
     saveExpenses(expenses);
-    
+    renderExpensesList();
+    expenseTitle.value = "";
+    expenseAmount.value = "";
   });
+  deleteButton.addEventListener("click", deleteExpenseItem);
 });
