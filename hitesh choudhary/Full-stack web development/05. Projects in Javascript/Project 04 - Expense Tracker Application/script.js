@@ -48,12 +48,12 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function deleteExpenseItem(event) {
-    if (event.target.tagName === "BUTTON") {
-      const expenseId = parseInt(event.target.getAttribute("data-id"));
+    if (event.target.tagName !== "BUTTON") return; 
+    
+      const expenseId = Number(event.target.getAttribute("data-id"));
       expenses = expenses.filter((expense) => expense.id !== expenseId);
       saveExpenses(expenses);
       renderExpensesList();
-    }
   }
 
   function renderTotalExpense() {
@@ -104,5 +104,4 @@ document.addEventListener("DOMContentLoaded", function () {
     expenseTitle.value = "";
     expenseAmount.value = "";
   });
-  deleteButton.addEventListener("click", deleteExpenseItem);
 });
