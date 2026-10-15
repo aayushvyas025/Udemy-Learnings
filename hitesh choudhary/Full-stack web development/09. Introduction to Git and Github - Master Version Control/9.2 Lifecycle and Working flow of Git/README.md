@@ -115,4 +115,67 @@ Remote Repository
 **Key takeaway:** `git add` stages changes, `git commit` records a snapshot, and `git push` shares commits with a remote repository.
 
 
+## Understanding the Workflow in Git
+
+Understanding the workflow in Git is important because it helps us understand the different states our files go through as we make changes, prepare them for tracking, and save snapshots of our project.
+
+Before exploring the Git workflow in depth, we should configure Git's global settings. This allows us to define our default commit identity and other preferences for the current operating system user.
+
+### Global Configuration of Git
+
+Global configuration in Git allows us to set preferences that apply to all repositories for the current operating system user account, unless overridden by more specific configuration settings.
+
+These settings are commonly stored in a plain-text file named `.gitconfig`, located in the user's home directory.
+
+| Operating System | Configuration File |
+|---|---|
+| macOS / Linux | `~/.gitconfig` |
+| Windows | `C:\Users\<username>\.gitconfig` |
+
+#### Commands Related to Global Configuration
+
+To configure the global username and email address, run the following commands in a terminal or Git Bash.
+
+```bash
+# Set the global username
+git config --global user.name "Your Name"
+
+# Set the global email address
+git config --global user.email "your.email@example.com"
+```
+
+Git uses these values as the default author name and email address for commits.
+
+#### Verifying Global Configuration
+
+To list all applicable configuration values:
+
+```bash
+git config --list
+```
+
+To list only the global configuration values:
+
+```bash
+git config --global --list
+```
+
+To check the configured username and email individually:
+
+```bash
+git config --global --get user.name
+git config --global --get user.email
+```
+
+### Why Is Global Configuration Important?
+
+- **Commit identity:** Defines the default author name and email recorded in commits.
+- **Default preferences:** Lets us configure Git settings that apply across repositories.
+- **Consistency:** Avoids repeating the same configuration in every repository.
+- **Overrides:** Repository-specific settings can override global settings when needed.
+
+**Important:** Global configuration does not track files or create commits. It configures Git's default identity and preferences. The actual workflow involves the working directory, staging area, and repository history.
+
+
+
 
