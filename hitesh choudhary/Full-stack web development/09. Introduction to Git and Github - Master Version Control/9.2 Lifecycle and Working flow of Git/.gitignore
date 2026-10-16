@@ -1,0 +1,5 @@
+# This .gitingore file helps to add some important files which shouldn't expose in remote repository  
+# dotenv file never expose on remote repository which have sensitive data like API key, URI, URL, API SECRET etc. 
+
+.env 
+node_modules 
