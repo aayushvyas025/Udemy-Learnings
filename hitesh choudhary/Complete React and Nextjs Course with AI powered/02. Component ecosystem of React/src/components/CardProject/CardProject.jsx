@@ -1,5 +1,13 @@
 import React from "react";
 
+/***
+ * ? What is Components in React 
+ * The components are the functions or classes which use to create modular and reusable UI's which takes arguments as props and return JSX , After the react 16 version mainly components are implement with the help of functions only. 
+ * 
+ * ? What is JSX ? 
+ *  JSX is the combination of HTML and Javascript XML to help to write html markup elements inside the javascript. 
+ */
+
 function CardProject() {
   return (
     <div className="max-w-sm bg-slate-950 border-gray-200 border-b rounded-xl text-white shadow-xl">
