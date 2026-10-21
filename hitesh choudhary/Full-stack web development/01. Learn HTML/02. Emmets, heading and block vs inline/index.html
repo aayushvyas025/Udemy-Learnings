@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emmets, Heading and Block vs Inline</title>
+    <style>
+      html {
+        box-sizing: border-box;
+      }
+
+      *,
+      *::after,
+      *::before {
+        margin: 0;
+        padding: 0;
+        box-sizing: inherit;
+      }
+
+      h1 {
+        padding: 15px;
+      }
+
+      body {
+        background-color: #111;
+        color: #fff;
+      }
+      ul,
+      ol,
+      dl {
+        margin: 10px;
+        padding-inline: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <!--* Headings tag are used to create heading content for our html documents  -->
+    <!-- HTML headings are different types in html to represent different type and meaning of headings -->
+    <!-- We have 6 types of heading tags from h1 to h6 and every heading tags have it's own importance and meaning. -->
+    <h1>Emmets, Heading and Block vs Inline</h1>
+    <!-- Thi is our h1 heading tag which is most importance and important tag which we use for main heading of our page. h1 heading is most bold and bigger in the size -->
+    <h2>Headings in HTML</h2>
+    <!-- This our h2 tag which use for subheadings and other h3, h4, h5, h6 are also for sub-headings only. -->
+    <h3>This is heading tag level 3</h3>
+    <h4>This is heading tag level 4</h4>
+    <h5>This is heading tag level 5</h5>
+    <h6>This is heading tag level 6</h6>
+    <!-- In HTML, h1 tag is most important and significant tag and h6 is least important tag, From h1 -> h6 tag the boldness and size is decrease  -->
+
+    <!--? What is HTML Elements ? -->
+    <!-- HTML element is called to complete components of opening tag, the content, and a closing tag. -->
+    <!-- Example <h6>This is heading tag level 6 </h6>  -->
+
+    <!--? Attributes in HTML Elements -->
+    <!-- HTML tags have some properties which give more information about the html elements or some properties change the behavior of our html elements which known as Attributes. -->
+    <!-- Example of html attributes -->
+    <h2 title="h2 tag">This is Heading</h2>
+    <!-- this is title attribute which use for giving tool-tip for our html heading. -->
+    <!--? HTML attributes are mainly are of two types public attributes which apply on every html elements and private attributes which apply on particular elements -->
+
+    <!--* paragraphs tag are used to add text content in our html documents -->
+    <!-- In, HTML tags we use p tag for paragraphs -->
+    <p>This is the example of paragraph in HTML documents.</p>
+
+    <!-- We can generate dummy paragraphs from emmet like lorem-ipsum also -->
+    <!-- Here, we add lorem*6 for adding 6 paragraphs  -->
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt alias in,
+      quasi, vel optio accusantium maiores dolor et quos deserunt neque totam.
+      Dolores mollitia consectetur expedita? Accusamus, distinctio! Neque,
+      porro? Aliquam illo blanditiis maxime at atque ipsam quibusdam iste fugit,
+      deleniti nisi earum maiores, aliquid repudiandae quo quae voluptatibus
+      voluptas ducimus quas ipsa nihil amet vero! Dignissimos temporibus velit
+      dolorem? Porro cumque aspernatur rerum quo alias dolorum fugiat voluptas
+      laboriosam odit reiciendis! Error, aut eveniet necessitatibus dolor
+      quibusdam praesentium impedit molestias saepe vel a, autem ducimus ad
+      consectetur ipsa eligendi. Est consequatur architecto repudiandae dolorum.
+      Suscipit distinctio maxime est, magni exercitationem nihil asperiores ab
+      laudantium doloremque neque pariatur nesciunt hic rem explicabo odit
+      corrupti provident labore consectetur dolore vitae minus. Nulla,
+      recusandae quod magnam atque, mollitia maxime sunt porro exercitationem
+      odio iusto id provident explicabo sint quam aspernatur pariatur nesciunt
+      cumque quibusdam nihil, sapiente tempore. Iure ducimus quisquam quas
+      porro.
+    </p>
+
+    <!-- We can add dummy text by characters also with the help of lorem10 which add 10 characters -->
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque,
+      corrupti?
+    </p>
+    <!--* image tag are used insert images in our html documents -->
+    <!-- In HTML documents we can insert or embed images with the help of img tag -->
+    <img src="./src/1080x360.jpeg" alt="background image" />
+    <!--? This img tag is self-closing tag which use to insert images in our html documents this img tag have to attribute `src` is source to insert images and `alt` attribute is the secondary attribute which helps when the image is not render if have some issue than this alternate text image is render.   -->
+
+    <!-- In html we can add images path of two type native and absolute -->
+    <!-- native path : in native we add from the current folder or from root folder. -->
+    <!-- absolute path: in abolsute path a complete web address that contains all the information needed to locate a resource on the internet -->
+    <img
+      src="https://i.pinimg.com/236x/18/34/f1/1834f1c16b539fa942617e4822e560a2.jpg"
+      alt="profile pic"
+    />
+
+    <!--* anchor tag are used to add hyper-links or links in our html documents  -->
+    <!-- anchor tag `a tag` is used to add hyper-links or other html documents in our html documents -->
+    <a href="https://www.google.com" target="_blank">Go to goole</a>
+    <!--? Here we have the href attribute `hyper-reference` to add hyper-links in our html documents -->
+    <!--? second is targert attribute which helps to change the behavior of anchor tag here we use target='_blank' which open our link in new tab -->
+    <a href="./second.html" target="_blank">Navigate to Second Document</a>
+
+    <!--* ul, ol is used to create lists in our html documents -->
+    <!-- In HTML Docs, we have mainly three types of list tag: 
+         1. ul - Unordered list are not in order instead of numbering, alphabet or roman numbers we use bullets, circle points for list. 
+         2. ol - Ordered list  are in order and we use different types of numberic type to show order like numbers, alphabets and roman numbers.
+        3. dl - This is description list which used to create our list with description.   -->
+
+    <!--? ordered list -->
+    <p>List of Fruits</p>
+    <ol type="A" start="3">
+      <!-- This `type` attribute controls which type of ordering we want in roman, alphabet, numbering etc.  -->
+      <!-- This `start` attribute controls from where or what value starts our ordering and it's accept numeric character only. -->
+      <li>Mangoes</li>
+      <!-- Li tag is used to create list items in our list. -->
+      <li>Apples</li>
+      <li>Bananas</li>
+    </ol>
+    <!--? unordered list -->
+    <p>List of Vegeis</p>
+    <ul type="circle">
+      <!-- type: Defined the bullet marker style (disc, circle, square). -->
+      <li>Tomato</li>
+      <li>Potatao</li>
+      <li>Spanich</li>
+      <li>Onion</li>
+    </ul>
+    <p>Description list</p>
+    <!--? description list -->
+    <dl>
+      <!--? In description list we use dt 'description title' for title -->
+      <dt>HTML</dt>
+      <!-- ? In description list we use dd 'description data' for inserting description our list  -->
+      <dd>
+        HTML is building block of our Web pages which stands for Hyper-text
+        Markup Language
+      </dd>
+    </dl>
+    <a href="./elements_type.html">
+      <h2>Types of Elements</h2>
+    </a>
+  </body>
+</html>

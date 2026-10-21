@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Types of Elements in HTML</title>
+    <style>
+      html {
+        box-sizing: border-box;
+      }
+
+      *,
+      *::after,
+      *::before {
+        margin: 0;
+        padding: 0;
+        box-sizing: inherit;
+      }
+
+      h1 {
+        padding: 15px;
+      }
+
+      body {
+        background-color: #111;
+        color: #fff;
+      }
+      ul,
+      ol,
+      dl {
+        margin: 10px;
+        padding-inline: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Types of Elements in HTML</h1>
+    <!-- In HTML, we have two types of HTML Elements:  -->
+    <!--* Block Level Elements -->
+    <!-- Block level elements are those which takes whole space vertically and start new elements from new-line. This Block level have width and height which we set with attributes or styling.  -->
+    <!-- Example of Block level elements -->
+    <h2>Heading tags are the example of block-level elements.</h2>
+    <p>Paragraph tag is also the example of block-level element.</p>
+    <!--? Here we have special block-level tag which use as container to format our html docs, which is div tag -->
+    <div>This is the block-level container tag which is called div tag.</div>
+    <!--* Inline Level Elements -->
+    <!-- Inline level elements are those take only content needed space and also give access to set other inline html elements to set adjacently on same line. We can't set the height and width of our html elements. -->
+    <!-- Example of Inline level tags -->
+    <img src="./src/1080x360.jpeg" alt="adding image" />
+    <!-- Some inline tags -->
+    <!--? b and strong tag -->
+    <!-- Both tags will make our content bold but convey different importance and meaning here b tag just bold our content but strong tag adds structural importance to the content.  -->
+    <p>
+      <b>This is bold tag</b>
+      <strong>This is strong tag</strong> both makes our content bold.
+    </p>
+
+    <!--? i and em tag -->
+    <!-- i and em tag creates our content italicizing but convey different importance and meaning here i just create content italic and em tag also makes our content but create structural importance by giving stress importance of our sentence or word.  -->
+    <p>
+      <i>This is italic text by i tag.</i>
+      <em>This is italic text by em tag.</em>
+    </p>
+
+    <!--? Similar like div we have inline level of container also which we called span tag -->
+    <span
+      >Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque,
+      blanditiis!</span
+    >
+  </body>
+</html>
